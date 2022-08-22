@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -94,7 +95,10 @@ class ProfileFragment : Fragment() {
                     }
                 }
                 saveProfilePicture()
+                Toast.makeText(context,"Profile Saved", Toast.LENGTH_SHORT).show()
+                true
             }
+
         }
         return true
     }
